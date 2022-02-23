@@ -1,5 +1,7 @@
 import { CursorError } from '@angular/compiler/src/ml_parser/lexer';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { IUser } from '../_models/user';
 import { AccountService } from '../_services/account.service';
@@ -13,7 +15,7 @@ export class NavComponent implements OnInit {
   model: any = {};
   currentUser$: Observable<IUser>;
 
-  constructor(private _service:AccountService) { }
+  constructor(private _service:AccountService, private _router: Router, private _toast: ToastrService) { }
 
   ngOnInit(): void {
     this.currentUser$ = this._service.currentUser$;
@@ -21,14 +23,16 @@ export class NavComponent implements OnInit {
 
   login() {
     this._service.login(this.model).subscribe(res => {
-      console.log(res);
+      this._router.navigateByUrl('/members');
     }, error => {
       console.log(error);
+      this._toast.error(error.error);
     })
   }
 
   logout(){
     this._service.logout();
+    this._router.navigateByUrl('/');
   }
 
 }

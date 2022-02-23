@@ -1,6 +1,6 @@
 <form #registerForm (ngSubmit)="register()" autocomplete="off">
-    <h2 class="text-center text-success">Sign up</h2>
-    <div class="form-groupmt-4">
+    <h2 class="text-center text-secondary fw-bold">Sign up</h2>
+    <div class="form-group mt-4">
         <input type="text" class="form-control " [(ngModel)]="model.username" name="username"
             placeholder="Username">
     </div>
@@ -9,7 +9,7 @@
             placeholder="Password">
     </div>
     <div class="form-group text-center mt-4">
-        <button class="btn btn-outline-success me-2" type="submit">Register</button>
-        <button class="btn btn-success me-2" (click)="cancel()">Cancel</button>
+        <button class="btn btn-outline-primary me-2" type="submit">Register</button>
+        <button class="btn btn-primary me-2" (click)="cancel()">Cancel</button>
     </div>
 </form>
