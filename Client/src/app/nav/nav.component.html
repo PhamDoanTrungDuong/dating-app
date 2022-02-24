@@ -22,7 +22,7 @@
                 <strong>Welcom, <span>{{ user.username | titlecase}}</span></strong>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" *dropdownMenu>
-                <li><button class="dropdown-item" type="button">Edit Profile</button></li>
+                <li><a routerLink="/member/edit" class="dropdown-item" type="button">Edit Profile</a></li>
                 <div class="dropdown-divider"></div>
                 <li><button class="dropdown-item" type="button" (click)="logout()">Logout</button></li>
             </ul>
