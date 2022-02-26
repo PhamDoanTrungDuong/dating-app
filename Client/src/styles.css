@@ -3,6 +3,8 @@
 
 @import "~bootswatch/dist/journal/bootstrap.min.css";
 
+@import "../node_modules/ngx-spinner/animations/square-jelly-box.css";
+
 .tab-panel {
     border: 1px solid #ddd;
     padding: 10px;

@@ -6,7 +6,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
-
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 @NgModule({
   declarations: [],
@@ -19,6 +19,7 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
     TabsModule.forRoot(),
     FileUploadModule,
     ProgressbarModule.forRoot(),
+    BsDatepickerModule.forRoot(),
   ],
   exports: [
     BsDropdownModule,
@@ -27,6 +28,7 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
     NgxGalleryModule,
     FileUploadModule,
     ProgressbarModule,
+    BsDatepickerModule,
   ]
 })
 export class SharedModule { }
